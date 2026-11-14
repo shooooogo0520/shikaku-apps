@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AWS クラウドプラクティショナー（CLF-C02）の練習問題：クラウドの概念（20問・解説つき）</title>
+<meta name="description" content="AWS クラウドプラクティショナー（CLF-C02）の「クラウドの概念」の練習問題20問。すべてオリジナル問題で、答えと解説つき。スマホでそのまま解けます。">
+<link rel="canonical" href="https://shooooogo0520.github.io/shikaku-apps/practice/aws-clf/concepts.html">
+<meta property="og:title" content="AWS クラウドプラクティショナー（CLF-C02）の練習問題：クラウドの概念（20問・解説つき）">
+<meta property="og:description" content="AWS クラウドプラクティショナー（CLF-C02）の「クラウドの概念」の練習問題20問。すべてオリジナル問題で、答えと解説つき。スマホでそのまま解けます。">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://shooooogo0520.github.io/shikaku-apps/practice/aws-clf/concepts.html">
+<meta name="theme-color" content="#1E6BEB">
+<style>:root{--p:#1E6BEB;--bg:#f6f7f9;--card:#fff;--text:#14171c;--dim:#5d6570;--line:#e3e6ea;--ok:#1f9d55}
+@media (prefers-color-scheme:dark){:root{--bg:#0f1115;--card:#1a1d23;--text:#eef0f3;--dim:#a2a9b3;--line:#2b3038}}
+*{box-sizing:border-box}html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Yu Gothic UI","Noto Sans JP",sans-serif;line-height:1.75;font-size:16px}
+main{max-width:720px;margin:0 auto;padding:16px}
+header.top{background:var(--p);color:#fff;padding:20px 16px}
+header.top .in{max-width:720px;margin:0 auto}
+header.top a{color:#fff;opacity:.9;font-size:14px;text-decoration:none}
+h1{font-size:24px;line-height:1.4;margin:6px 0 4px}
+.lead{font-size:15px;opacity:.95;margin:0}
+h2{font-size:18px;margin:28px 0 10px}
+.card{background:var(--card);border-radius:14px;padding:16px;margin:12px 0;box-shadow:0 1px 2px rgba(0,0,0,.06)}
+.qno{font-size:13px;font-weight:700;color:var(--p)}
+.qtext{margin:4px 0 10px;font-weight:600}
+ol.ch{list-style:none;padding:0;margin:0}
+ol.ch li{padding:8px 10px 8px 2.2em;text-indent:-1.6em;border-top:1px solid var(--line)}
+details{margin-top:10px;border-radius:10px;background:var(--bg)}
+summary{cursor:pointer;padding:10px 12px;font-weight:700;color:var(--p);list-style:none}
+summary::-webkit-details-marker{display:none}
+summary::before{content:"▶ ";font-size:11px}
+details[open] summary::before{content:"▼ "}
+.ans{padding:0 12px 12px}
+.ans .ok{color:var(--ok);font-weight:700}
+.chapters a{display:flex;justify-content:space-between;gap:12px;padding:14px 4px;border-top:1px solid var(--line);color:var(--text);text-decoration:none}
+.chapters a:first-child{border-top:0}
+.chapters .n{color:var(--dim);white-space:nowrap}
+.cta{background:var(--card);border:2px solid var(--p);border-radius:14px;padding:16px;margin:28px 0}
+.cta b{display:block;font-size:17px;margin-bottom:6px}
+.btn{display:inline-block;margin-top:10px;background:var(--p);color:#fff;padding:12px 18px;border-radius:999px;text-decoration:none;font-weight:700}
+.pager{display:flex;justify-content:space-between;gap:12px;margin:20px 0}
+.pager a{color:var(--p);font-weight:700;text-decoration:none}
+footer{max-width:720px;margin:0 auto;padding:8px 16px 40px;color:var(--dim);font-size:13px}
+footer a{color:var(--dim)}</style>
+</head>
+<body>
+<header class="top"><div class="in"><a href="./">← CLF 一問一答 練習問題</a><h1>第1章　クラウドの概念</h1><p class="lead">20問・答えと解説つき（問題を読んでから「答えと解説を見る」を押す）</p></div></header>
+<main>
+<section class="card" id="q1">
+<div class="qno">第1章　問1</div>
+<p class="qtext">AWSが挙げる「クラウドコンピューティングの6つの利点」に含まれるものはどれ？</p>
+<ol class="ch">
+<li>ア　すべてのデータが自動で暗号化される</li>
+<li>イ　ソフトウェアのライセンスが不要になる</li>
+<li>ウ　キャパシティの予測が不要になる</li>
+<li>エ　システムの障害が起きなくなる</li>
+</ol>
+<details><summary>答えと解説を見る</summary><div class="ans">
+<p class="ok">正解：ウ　キャパシティの予測が不要になる</p>
+<p>6つの利点の1つに「キャパシティの予測が不要になる（Stop guessing capacity）」がある。暗号化やライセンス不要は利点として挙げられておらず、障害がゼロになることもない。</p>
+</div></details>
+</section>
+<section class="card" id="q2">
+<div class="qno">第1章　問2（2つ選ぶ）</div>
+<p class="qtext">クラウドコンピューティングの6つの利点に含まれるものはどれ？2つ選んで。</p>
+<ol class="ch">
+<li>ア　長期契約で料金を必ず固定できる</li>
+<li>イ　ハードウェアを自社の資産として所有できる</li>
+<li>ウ　固定費を変動費に変えられる</li>
+<li>エ　数分でグローバルに展開できる</li>
+<li>オ　利用者がデータセンターの物理的な警備を担当できる</li>
+</ol>
+<details><summary>答えと解説を見る</summary><div class="ans">
+<p class="ok">正解：ウ　固定費を変動費に変えられる<br>エ　数分でグローバルに展開できる</p>
+<p>「固定費を変動費に変える」「数分でグローバルに展開」はどちらも6つの利点に含まれる。物理的な警備はAWSの担当で、ハードウェアの所有や料金の固定はクラウドの利点ではない。</p>
+</div></details>
+</section>
+<section class="card" id="q3">
+<div class="qno">第1章　問3</div>
+<p class="qtext">AWSが多くの利用者のリソースをまとめて運用することで、利用者がより安い従量料金を受けられる。この利点を何という？</p>
+<ol class="ch">
+<li>ア　伸縮性</li>
+<li>イ　高可用性</li>
+<li>ウ　フォールトトレランス</li>
+<li>エ　規模の経済</li>
+</ol>
+<details><summary>答えと解説を見る</summary><div class="ans">
+<p class="ok">正解：エ　規模の経済</p>
+<p>多数の利用者の利用量を集約することでAWSのコストが下がり、それが料金の引き下げにつながる。これが「規模の経済」の利点。伸縮性や高可用性はシステムの性質の話で、価格の仕組みではない。</p>
+</div></details>
+</section>
+<section class="card" id="q4">
+<div class="qno">第1章　問4</div>
+<p class="qtext">ある会社では、新しいサーバーを用意するのに調達から設置まで数週間かかっていた。AWSに移ると数分で用意できるようになった。これはクラウドのどの利点にあたる？</p>
+<ol class="ch">
+<li>ア　速度と俊敏性の向上</li>
+<li>イ　規模の経済</li>
+<li>ウ　データセンターの運用・保守への投資が不要</li>
+<li>エ　フォールトトレランス</li>
+</ol>
+<details><summary>答えと解説を見る</summary><div class="ans">
+<p class="ok">正解：ア　速度と俊敏性の向上</p>
+<p>リソースを数分で用意でき、試行錯誤のスピードが上がるのは「速度と俊敏性（スピードとアジリティ）」の利点。規模の経済は料金の安さ、フォールトトレランスは障害時も止まらない性質を指す。</p>
+</div></details>
+</section>
+<section class="card" id="q5">
+<div class="qno">第1章　問5</div>
+<p class="qtext">「伸縮性（エラスティシティ）」と「拡張性（スケーラビリティ）」の違いの説明として最も適切なものはどれ？</p>
+<ol class="ch">
+<li>ア　伸縮性はリソースを減らすことだけ、拡張性はリソースを増やすことだけを指す</li>
+<li>イ　伸縮性はオンプレミスの性質、拡張性はクラウドだけの性質</li>
+<li>ウ　伸縮性は需要の増減に合わせてリソースを自動で増やしたり減らしたりすること、拡張性は需要の増加に対応できるようにリソースを増やせること</li>
+<li>エ　伸縮性はデータのバックアップ、拡張性はデータの暗号化を指す</li>
+</ol>
+<details><summary>答えと解説を見る</summary><div class="ans">
+<p class="ok">正解：ウ　伸縮性は需要の増減に合わせてリソースを自動で増やしたり減らしたりすること、拡張性は需要の増加に対応できるようにリソースを増やせること</p>
+<p>伸縮性は需要の変化に応じて自動で増減し、余った分を減らしてコストを抑える点が特徴。拡張性は負荷の増加に合わせて規模を大きくできる能力を指す。どちらもバックアップや暗号化とは関係がない。</p>
+</div></details>
+</section>
+<section class="card" id="q6">
+<div class="qno">第1章　問6</div>
+<p class="qtext">ECサイトの会社は、セールの日だけアクセスが10倍になる。ピークに合わせてサーバーを常に用意しておくと、普段はほとんどが使われない。クラウドのどの特性を使えばこの無駄を減らせる？</p>
+<ol class="ch">
+<li>ア　データ主権</li>
+<li>イ　伸縮性</li>
+<li>ウ　ライセンス持ち込み</li>
+<li>エ　物理的な分離</li>
+</ol>
+<details><summary>答えと解説を見る</summary><div class="ans">
+<p class="ok">正解：イ　伸縮性</p>
+<p>伸縮性を活かせば、ピーク時だけリソースを増やし、普段は減らして使った分だけ支払える。データ主権はデータの保管場所の話で、ライセンス持ち込みや物理的な分離はアクセス変動への対応とは関係がない。</p>
+</div></details>
+</section>
+<section class="card" id="q7">
+<div class="qno">第1章　問7</div>
+<p class="qtext">「高可用性」と「フォールトトレランス（耐障害性）」の違いとして正しいものはどれ？</p>
+<ol class="ch">
+<li>ア　高可用性はセキュリティを高めること、フォールトトレランスはコストを下げること</li>
+<li>イ　高可用性はオンプレミス専用、フォールトトレランスはクラウド専用の考え方</li>
+<li>ウ　両者はまったく同じ意味で、違いはない</li>
+<li>エ　高可用性は停止時間をできるだけ短くすること、フォールトトレランスは一部が故障してもサービスを止めずに動き続けること</li>
+</ol>
+<details><summary>答えと解説を見る</summary><div class="ans">
+<p class="ok">正解：エ　高可用性は停止時間をできるだけ短くすること、フォールトトレランスは一部が故障してもサービスを止めずに動き続けること</p>
+<p>高可用性は短い停止はありえても、全体として使える時間を最大にする考え方。フォールトトレランスは部品の故障が起きても中断なく動き続けることを目指す、より厳しい性質。どちらもセキュリティやコストそのものを指す言葉ではない。</p>
+</div></details>
+</section>
+<section class="card" id="q8">
+<div class="qno">第1章　問8</div>
+<p class="qtext">オンプレミスでは数年先の需要を見込んでサーバーを買う必要があり、買いすぎや不足が起きていた。クラウドではこの問題を解決できる。これを表すAWSの利点はどれ？</p>
+<ol class="ch">
+<li>ア　キャパシティの予測が不要になる</li>
+<li>イ　数分でグローバルに展開できる</li>
+<li>ウ　規模の経済の恩恵を受けられる</li>
+<li>エ　データセンターの運用・保守への投資が不要</li>
+</ol>
+<details><summary>答えと解説を見る</summary><div class="ans">
+<p class="ok">正解：ア　キャパシティの予測が不要になる</p>
+<p>必要なときに必要な分だけ増減できるので、事前に容量を見積もって買う必要がない。これが「キャパシティの予測が不要」の利点。グローバル展開や規模の経済は別の利点を指す。</p>
+</div></details>
+</section>
+<section class="card" id="q9">
+<div class="qno">第1章　問9</div>
+<p class="qtext">ある会社は、サーバーの設置、電源や空調の管理といった作業をやめ、自社の製品開発に人を集中させたい。これはクラウドのどの利点にあたる？</p>
+<ol class="ch">
+<li>ア　数分でグローバルに展開できる</li>
+<li>イ　キャパシティの予測が不要になる</li>
+<li>ウ　データセンターの運用・保守への投資が不要になる</li>
+<li>エ　規模の経済の恩恵を受けられる</li>
+</ol>
+<details><summary>答えと解説を見る</summary><div class="ans">
+<p class="ok">正解：ウ　データセンターの運用・保守への投資が不要になる</p>
+<p>ラックの設置や電源・空調の管理といった重労働から解放され、顧客や事業に集中できるのが「データセンターの運用・保守にお金をかけなくてよい」利点。ほかの選択肢も利点だが、この場面を最もよく表すものではない。</p>
+</div></details>
+</section>
+<section class="card" id="q10">
+<div class="qno">第1章　問10</div>
+<p class="qtext">日本の会社が、ヨーロッパの利用者向けに低い遅延でサービスを出したい。自社でデータセンターを建てる代わりに、数クリックでヨーロッパのリージョンにアプリを展開した。これはどの利点の例？</p>
+<ol class="ch">
+<li>ア　固定費を変動費に変えられる</li>
+<li>イ　数分でグローバルに展開できる</li>
+<li>ウ　フォールトトレランス</li>
+<li>エ　伸縮性</li>
+</ol>
+<details><summary>答えと解説を見る</summary><div class="ans">
+<p class="ok">正解：イ　数分でグローバルに展開できる</p>
+<p>世界中のリージョンを使えば、海外の利用者の近くにすぐアプリを置ける。これが「数分でグローバルに展開」の利点。伸縮性は台数の増減、フォールトトレランスは障害への強さの話。</p>
+</div></details>
+</section>
+<section class="card" id="q11">
+<div class="qno">第1章　問11</div>
+<p class="qtext">AWS Well-Architected フレームワークの6つの柱に含まれないものはどれ？</p>
+<ol class="ch">
+<li>ア　持続可能性</li>
+<li>イ　運用上の優秀性</li>
+<li>ウ　コスト最適化</li>
+<li>エ　スケーラビリティ</li>
+</ol>
+<details><summary>答えと解説を見る</summary><div class="ans">
+<p class="ok">正解：エ　スケーラビリティ</p>
+<p>6つの柱は「運用上の優秀性」「セキュリティ」「信頼性」「パフォーマンス効率」「コスト最適化」「持続可能性」。スケーラビリティは大切な考え方だが、独立した柱ではない。</p>
+</div></details>
+</section>
+<section class="card" id="q12">
+<div class="qno">第1章　問12</div>
+<p class="qtext">Well-Architected フレームワークで、障害から自動で復旧する、需要に応じて変化するなど「期待どおりに機能を果たし続ける」ことを扱う柱はどれ？</p>
+<ol class="ch">
+<li>ア　信頼性</li>
+<li>イ　パフォーマンス効率</li>
+<li>ウ　運用上の優秀性</li>
+<li>エ　セキュリティ</li>
+</ol>
+<details><summary>答えと解説を見る</summary><div class="ans">
+<p class="ok">正解：ア　信頼性</p>
+<p>信頼性の柱は、ワークロードが意図した機能を正しく一貫して果たすことを扱い、障害からの自動復旧や復旧手順のテストなどが含まれる。パフォーマンス効率はリソースを効率よく使うこと、運用上の優秀性は運用と改善の仕組みを扱う。</p>
+</div></details>
+</section>
+<section class="card" id="q13">
+<div class="qno">第1章　問13</div>
+<p class="qtext">Well-Architected フレームワークで、クラウドのワークロードが環境に与える影響（エネルギー消費など）を減らすことに焦点を当てた柱はどれ？</p>
+<ol class="ch">
+<li>ア　コスト最適化</li>
+<li>イ　パフォーマンス効率</li>
+<li>ウ　持続可能性</li>
+<li>エ　信頼性</li>
+</ol>
+<details><summary>答えと解説を見る</summary><div class="ans">
+<p class="ok">正解：ウ　持続可能性</p>
+<p>持続可能性の柱は、エネルギー消費の削減や効率化によって環境への影響を最小にすることを扱う。コスト最適化は費用、パフォーマンス効率は性能面の効率を扱う柱。</p>
+</div></details>
+</section>
+<section class="card" id="q14">
+<div class="qno">第1章　問14</div>
+<p class="qtext">Well-Architected フレームワークの「運用上の優秀性」の柱に最も関係が深い取り組みはどれ？</p>
+<ol class="ch">
+<li>ア　使っていないリソースを削除して料金を下げる</li>
+<li>イ　運用作業をコードとして定義し、小さな変更をこまめに行う</li>
+<li>ウ　保存データと通信を暗号化する</li>
+<li>エ　処理に最も合ったインスタンスタイプを選ぶ</li>
+</ol>
+<details><summary>答えと解説を見る</summary><div class="ans">
+<p class="ok">正解：イ　運用作業をコードとして定義し、小さな変更をこまめに行う</p>
+<p>運用上の優秀性は、運用をコード化する、小さく元に戻せる変更を頻繁に行う、失敗から学ぶといった運用と継続的な改善を扱う。不要リソースの削除はコスト最適化、暗号化はセキュリティ、インスタンス選びはパフォーマンス効率にあたる。</p>
+</div></details>
+</section>
+<section class="card" id="q15">
+<div class="qno">第1章　問15</div>
+<p class="qtext">ある会社は、動画変換の処理に最も適したコンピューティングの種類やサイズを選び、技術の進化に合わせて見直したい。Well-Architected フレームワークのどの柱に当たる？</p>
+<ol class="ch">
+<li>ア　持続可能性</li>
+<li>イ　信頼性</li>
+<li>ウ　セキュリティ</li>
+<li>エ　パフォーマンス効率</li>
+</ol>
+<details><summary>答えと解説を見る</summary><div class="ans">
+<p class="ok">正解：エ　パフォーマンス効率</p>
+<p>パフォーマンス効率の柱は、要件に合ったリソースを効率よく使い、需要や技術の変化に合わせて選び直すことを扱う。信頼性は障害への対応、セキュリティは情報や資産の保護を扱う。</p>
+</div></details>
+</section>
+<section class="card" id="q16">
+<div class="qno">第1章　問16</div>
+<p class="qtext">自社のワークロードがAWSのベストプラクティスに沿っているかを、質問に答える形で見直し、改善点を見つけられるサービスはどれ？</p>
+<ol class="ch">
+<li>ア　AWS Well-Architected Tool</li>
+<li>イ　AWS DataSync</li>
+<li>ウ　AWS Outposts</li>
+<li>エ　AWS Transform MGN（旧 AWS Application Migration Service）</li>
+</ol>
+<details><summary>答えと解説を見る</summary><div class="ans">
+<p class="ok">正解：ア　AWS Well-Architected Tool</p>
+<p>AWS Well-Architected Tool は、Well-Architected フレームワークに基づく質問に答えてワークロードをレビューし、リスクと改善計画を確認できる。DataSync はファイルの転送、Outposts はオンプレミスでAWSを動かすための製品、Transform MGN はサーバーの移行に使う。</p>
+</div></details>
+</section>
+<section class="card" id="q17">
+<div class="qno">第1章　問17（2つ選ぶ）</div>
+<p class="qtext">Well-Architected フレームワークの柱と、その柱が扱う内容の組み合わせとして正しいものはどれ？2つ選んで。</p>
+<ol class="ch">
+<li>ア　持続可能性：システムを長期契約で固定して運用する</li>
+<li>イ　運用上の優秀性：すべての作業を手動で慎重に行う</li>
+<li>ウ　セキュリティ：データ・システム・資産を保護する</li>
+<li>エ　コスト最適化：不要な費用を避け、最小の費用で価値を出す</li>
+<li>オ　信頼性：最新の技術を常に使い続ける</li>
+</ol>
+<details><summary>答えと解説を見る</summary><div class="ans">
+<p class="ok">正解：ウ　セキュリティ：データ・システム・資産を保護する<br>エ　コスト最適化：不要な費用を避け、最小の費用で価値を出す</p>
+<p>セキュリティはデータやシステムの保護、コスト最適化は不要な支出を避けることを扱う。信頼性は障害への対応と復旧、持続可能性は環境への影響の削減の柱で、運用上の優秀性はむしろ運用の自動化を勧める。</p>
+</div></details>
+</section>
+<section class="card" id="q18">
+<div class="qno">第1章　問18</div>
+<p class="qtext">システムの部品同士を直接つなぐ代わりに、間にキューを置いて、片方が止まってももう片方が影響を受けにくくした。この設計の原則を何という？</p>
+<ol class="ch">
+<li>ア　垂直スケーリング</li>
+<li>イ　疎結合</li>
+<li>ウ　単一障害点の集約</li>
+<li>エ　オーバープロビジョニング</li>
+</ol>
+<details><summary>答えと解説を見る</summary><div class="ans">
+<p class="ok">正解：イ　疎結合</p>
+<p>キューなどで部品同士の依存を弱め、1つの故障や遅延が全体に広がらないようにするのが疎結合。垂直スケーリングは1台の性能を上げること、オーバープロビジョニングは必要以上に用意することで、どちらも別の話。</p>
+</div></details>
+</section>
+<section class="card" id="q19">
+<div class="qno">第1章　問19</div>
+<p class="qtext">クラウドの設計の考え方「障害を前提に設計する（Design for failure）」に最も合っている構成はどれ？</p>
+<ol class="ch">
+<li>ア　高性能なサーバー1台にすべての処理を集める</li>
+<li>イ　障害が起きないよう、サーバーの設定を一切変更しない</li>
+<li>ウ　障害が起きたら担当者が手作業でサーバーを作り直す</li>
+<li>エ　複数のアベイラビリティーゾーンにサーバーを分け、1台が止まっても処理を続けられるようにする</li>
+</ol>
+<details><summary>答えと解説を見る</summary><div class="ans">
+<p class="ok">正解：エ　複数のアベイラビリティーゾーンにサーバーを分け、1台が止まっても処理を続けられるようにする</p>
+<p>部品はいつか必ず壊れる前提で、複数のAZに分散して単一障害点をなくすのがこの原則。1台に集める構成は単一障害点になり、手作業の復旧は時間がかかり自動化の原則にも反する。</p>
+</div></details>
+</section>
+<section class="card" id="q20">
+<div class="qno">第1章　問20</div>
+<p class="qtext">負荷が増えたとき、サーバーをより大きなサイズに変えるのではなく、同じサイズのサーバーの台数を増やして対応する。これを何という？</p>
+<ol class="ch">
+<li>ア　水平スケーリング（スケールアウト）</li>
+<li>イ　垂直スケーリング（スケールアップ）</li>
+<li>ウ　リホスト</li>
+<li>エ　ライトサイジング</li>
+</ol>
+<details><summary>答えと解説を見る</summary><div class="ans">
+<p class="ok">正解：ア　水平スケーリング（スケールアウト）</p>
+<p>台数を増やして負荷を分けるのが水平スケーリング（スケールアウト）。1台の性能を上げるのは垂直スケーリング（スケールアップ）で、上限があり単一障害点も残りやすい。リホストは移行戦略、ライトサイジングは適切なサイズへの見直し。</p>
+</div></details>
+</section>
+<div class="pager"><span></span><a href="security.html">セキュリティとコンプライアンス →</a></div>
+<div class="cta"><b>続きの920問は、アプリで解けます</b>
+iPhone アプリ「CLF一問一答」は、全1000問・すべて解説つき。間違えた問題をちょうどいい間隔で出し直す復習と、今の実力で合格できるかの予測つき。最初の80問は無料です。
+<br><a class="btn" href="https://apps.apple.com/jp/app/id6824628682">App Store で見る</a></div>
+</main>
+<footer><p>このページは個人が作成した非公式の練習問題で、Amazon Web Services, Inc. およびその関連会社とは関係ありません。問題はすべてオリジナルで、実際の試験問題ではありません。AWS および関連する名称は Amazon.com, Inc. またはその関連会社の商標です。</p><p>最終更新：2026-11-13　<a href="../">練習問題の一覧</a>　<a href="https://shooooogo0520.github.io/shikaku-apps/">サポート・お問い合わせ</a></p></footer>
+</body>
+</html>

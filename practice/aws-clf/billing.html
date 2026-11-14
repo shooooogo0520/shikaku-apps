@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AWS クラウドプラクティショナー（CLF-C02）の練習問題：請求・料金・サポート（20問・解説つき）</title>
+<meta name="description" content="AWS クラウドプラクティショナー（CLF-C02）の「請求・料金・サポート」の練習問題20問。すべてオリジナル問題で、答えと解説つき。スマホでそのまま解けます。">
+<link rel="canonical" href="https://shooooogo0520.github.io/shikaku-apps/practice/aws-clf/billing.html">
+<meta property="og:title" content="AWS クラウドプラクティショナー（CLF-C02）の練習問題：請求・料金・サポート（20問・解説つき）">
+<meta property="og:description" content="AWS クラウドプラクティショナー（CLF-C02）の「請求・料金・サポート」の練習問題20問。すべてオリジナル問題で、答えと解説つき。スマホでそのまま解けます。">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://shooooogo0520.github.io/shikaku-apps/practice/aws-clf/billing.html">
+<meta name="theme-color" content="#1E6BEB">
+<style>:root{--p:#1E6BEB;--bg:#f6f7f9;--card:#fff;--text:#14171c;--dim:#5d6570;--line:#e3e6ea;--ok:#1f9d55}
+@media (prefers-color-scheme:dark){:root{--bg:#0f1115;--card:#1a1d23;--text:#eef0f3;--dim:#a2a9b3;--line:#2b3038}}
+*{box-sizing:border-box}html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Yu Gothic UI","Noto Sans JP",sans-serif;line-height:1.75;font-size:16px}
+main{max-width:720px;margin:0 auto;padding:16px}
+header.top{background:var(--p);color:#fff;padding:20px 16px}
+header.top .in{max-width:720px;margin:0 auto}
+header.top a{color:#fff;opacity:.9;font-size:14px;text-decoration:none}
+h1{font-size:24px;line-height:1.4;margin:6px 0 4px}
+.lead{font-size:15px;opacity:.95;margin:0}
+h2{font-size:18px;margin:28px 0 10px}
+.card{background:var(--card);border-radius:14px;padding:16px;margin:12px 0;box-shadow:0 1px 2px rgba(0,0,0,.06)}
+.qno{font-size:13px;font-weight:700;color:var(--p)}
+.qtext{margin:4px 0 10px;font-weight:600}
+ol.ch{list-style:none;padding:0;margin:0}
+ol.ch li{padding:8px 10px 8px 2.2em;text-indent:-1.6em;border-top:1px solid var(--line)}
+details{margin-top:10px;border-radius:10px;background:var(--bg)}
+summary{cursor:pointer;padding:10px 12px;font-weight:700;color:var(--p);list-style:none}
+summary::-webkit-details-marker{display:none}
+summary::before{content:"▶ ";font-size:11px}
+details[open] summary::before{content:"▼ "}
+.ans{padding:0 12px 12px}
+.ans .ok{color:var(--ok);font-weight:700}
+.chapters a{display:flex;justify-content:space-between;gap:12px;padding:14px 4px;border-top:1px solid var(--line);color:var(--text);text-decoration:none}
+.chapters a:first-child{border-top:0}
+.chapters .n{color:var(--dim);white-space:nowrap}
+.cta{background:var(--card);border:2px solid var(--p);border-radius:14px;padding:16px;margin:28px 0}
+.cta b{display:block;font-size:17px;margin-bottom:6px}
+.btn{display:inline-block;margin-top:10px;background:var(--p);color:#fff;padding:12px 18px;border-radius:999px;text-decoration:none;font-weight:700}
+.pager{display:flex;justify-content:space-between;gap:12px;margin:20px 0}
+.pager a{color:var(--p);font-weight:700;text-decoration:none}
+footer{max-width:720px;margin:0 auto;padding:8px 16px 40px;color:var(--dim);font-size:13px}
+footer a{color:var(--dim)}</style>
+</head>
+<body>
+<header class="top"><div class="in"><a href="./">← CLF 一問一答 練習問題</a><h1>第4章　請求・料金・サポート</h1><p class="lead">20問・答えと解説つき（問題を読んでから「答えと解説を見る」を押す）</p></div></header>
+<main>
+<section class="card" id="q1">
+<div class="qno">第4章　問1</div>
+<p class="qtext">短期間だけ使う検証用サーバーで、いつ止めるかまだ決まっておらず、途中で中断されては困る。最も適したEC2の購入オプションはどれ？</p>
+<ol class="ch">
+<li>ア　リザーブドインスタンス（3年）</li>
+<li>イ　スポットインスタンス</li>
+<li>ウ　オンデマンドインスタンス</li>
+<li>エ　Dedicated Hosts</li>
+</ol>
+<details><summary>答えと解説を見る</summary><div class="ans">
+<p class="ok">正解：ウ　オンデマンドインスタンス</p>
+<p>オンデマンドインスタンスは長期の契約なしで、使った分だけ支払い、いつでも止められるので短期で先が読めない用途に向く。リザーブドインスタンスは1年か3年の契約が前提で、スポットインスタンスはAWSの都合で中断されることがある。</p>
+</div></details>
+</section>
+<section class="card" id="q2">
+<div class="qno">第4章　問2</div>
+<p class="qtext">ある会社は、社内の基幹システムを今後3年間、同じインスタンスタイプで24時間動かし続ける予定である。コストを最も抑えられる購入オプションはどれ？</p>
+<ol class="ch">
+<li>ア　3年のStandardリザーブドインスタンス</li>
+<li>イ　オンデマンドインスタンス</li>
+<li>ウ　スポットインスタンス</li>
+<li>エ　On-Demand Capacity Reservations</li>
+</ol>
+<details><summary>答えと解説を見る</summary><div class="ans">
+<p class="ok">正解：ア　3年のStandardリザーブドインスタンス</p>
+<p>使い方が長期間変わらないなら、3年のStandardリザーブドインスタンスで大きな割引を受けられる。オンデマンドは割引がなく、スポットは中断されうるので止められない基幹システムには向かない。Capacity Reservationsは容量を確保する仕組みで、それ自体は割引ではない。</p>
+</div></details>
+</section>
+<section class="card" id="q3">
+<div class="qno">第4章　問3</div>
+<p class="qtext">Convertibleリザーブドインスタンスの特徴として正しいものはどれ？</p>
+<ol class="ch">
+<li>ア　契約期間中にインスタンスファミリーなどを別のものに交換できる</li>
+<li>イ　Standardリザーブドインスタンスより割引率が必ず高い</li>
+<li>ウ　契約期間を1か月単位で選べる</li>
+<li>エ　AWSの都合で2分前の通知とともに中断されることがある</li>
+</ol>
+<details><summary>答えと解説を見る</summary><div class="ans">
+<p class="ok">正解：ア　契約期間中にインスタンスファミリーなどを別のものに交換できる</p>
+<p>Convertibleリザーブドインスタンスは、契約期間中にインスタンスファミリーやOSなどが異なるものへ交換できる。その柔軟さの代わりに、割引率はふつうStandardより低い。期間は1年か3年で、中断があるのはスポットインスタンス。</p>
+</div></details>
+</section>
+<section class="card" id="q4">
+<div class="qno">第4章　問4</div>
+<p class="qtext">リザーブドインスタンスの支払い方法のうち、同じ条件で比べたとき割引が最も大きくなるものはどれ？</p>
+<ol class="ch">
+<li>ア　前払いなし（No Upfront）</li>
+<li>イ　一部前払い（Partial Upfront）</li>
+<li>ウ　全額前払い（All Upfront）</li>
+<li>エ　毎月オンデマンド料金で支払う</li>
+</ol>
+<details><summary>答えと解説を見る</summary><div class="ans">
+<p class="ok">正解：ウ　全額前払い（All Upfront）</p>
+<p>リザーブドインスタンスは、前払いの額が多いほど割引が大きくなり、全額前払いが最も安い。前払いなしは初期費用がかからない代わりに割引が小さい。オンデマンド料金での支払いは割引の仕組みではない。</p>
+</div></details>
+</section>
+<section class="card" id="q5">
+<div class="qno">第4章　問5</div>
+<p class="qtext">リザーブドインスタンスを特定のアベイラビリティーゾーンを指定して購入する（ゾーン）場合に得られる、リージョン指定にはない特徴はどれ？</p>
+<ol class="ch">
+<li>ア　そのAZでのインスタンスの容量が予約される</li>
+<li>イ　割引がすべてのリージョンに適用される</li>
+<li>ウ　AWS Lambdaの料金にも割引が適用される</li>
+<li>エ　契約期間中にいつでも無料で解約できる</li>
+</ol>
+<details><summary>答えと解説を見る</summary><div class="ans">
+<p class="ok">正解：ア　そのAZでのインスタンスの容量が予約される</p>
+<p>AZを指定したリザーブドインスタンスは、割引に加えてそのAZでの容量予約が付く。リージョン指定のものは容量予約がない代わりに、リージョン内のどのAZでも割引が使える柔軟さがある。Lambdaへの適用や他リージョンへの適用はない。</p>
+</div></details>
+</section>
+<section class="card" id="q6">
+<div class="qno">第4章　問6</div>
+<p class="qtext">ある会社は、EC2のほかにAWS FargateとAWS Lambdaも使っており、今後インスタンスファミリーやリージョンを変えるかもしれない。割引を受けつつ柔軟性を最も保てるものはどれ？</p>
+<ol class="ch">
+<li>ア　EC2 Instance Savings Plans</li>
+<li>イ　Compute Savings Plans</li>
+<li>ウ　Standardリザーブドインスタンス</li>
+<li>エ　Dedicated Hosts</li>
+</ol>
+<details><summary>答えと解説を見る</summary><div class="ans">
+<p class="ok">正解：イ　Compute Savings Plans</p>
+<p>Compute Savings Plansは、インスタンスファミリー・リージョン・OSに関係なくEC2に適用され、FargateとLambdaにも適用される。EC2 Instance Savings Plansは特定のリージョンの特定のインスタンスファミリーに限られ、Standardリザーブドインスタンスも条件が固定される。</p>
+</div></details>
+</section>
+<section class="card" id="q7">
+<div class="qno">第4章　問7</div>
+<p class="qtext">EC2 Instance Savings Plansの説明として正しいものはどれ？</p>
+<ol class="ch">
+<li>ア　どのリージョンのどのインスタンスファミリーにも適用される</li>
+<li>イ　AWS FargateとAWS Lambdaにも適用される</li>
+<li>ウ　中断される可能性がある代わりに最大の割引を受けられる</li>
+<li>エ　選んだリージョンの特定のインスタンスファミリーに適用され、その範囲内ならサイズやOSを変えても割引が続く</li>
+</ol>
+<details><summary>答えと解説を見る</summary><div class="ans">
+<p class="ok">正解：エ　選んだリージョンの特定のインスタンスファミリーに適用され、その範囲内ならサイズやOSを変えても割引が続く</p>
+<p>EC2 Instance Savings Plansは、リージョンとインスタンスファミリーを決めて契約し、その中ならサイズ・OS・AZを変えても割引が適用される。範囲が狭い分、Compute Savings Plansより割引が大きい。FargateやLambdaへの適用はCompute Savings Plansの特徴。</p>
+</div></details>
+</section>
+<section class="card" id="q8">
+<div class="qno">第4章　問8</div>
+<p class="qtext">Savings Plansで利用者が約束（コミット）するものはどれ？</p>
+<ol class="ch">
+<li>ア　特定のEC2インスタンスIDを使い続けること</li>
+<li>イ　毎月決まった数のサポートケースを開くこと</li>
+<li>ウ　一定量のデータをAWSに保存し続けること</li>
+<li>エ　1年または3年の期間、1時間あたり一定の金額分の利用を続けること</li>
+</ol>
+<details><summary>答えと解説を見る</summary><div class="ans">
+<p class="ok">正解：エ　1年または3年の期間、1時間あたり一定の金額分の利用を続けること</p>
+<p>Savings Plansは、1年か3年の期間、1時間あたりの利用金額（ドル/時）を約束することで割引を受ける仕組み。特定のインスタンスに結び付くものではなく、約束した金額までの利用に割引料金が適用される。</p>
+</div></details>
+</section>
+<section class="card" id="q9">
+<div class="qno">第4章　問9</div>
+<p class="qtext">機械学習チームが、Amazon SageMaker AIのトレーニングや推論の利用料金を長期の約束で下げたい。最も適したものはどれ？</p>
+<ol class="ch">
+<li>ア　Amazon SageMaker Savings Plans</li>
+<li>イ　EC2 Instance Savings Plans</li>
+<li>ウ　スポットインスタンスのリクエスト</li>
+<li>エ　AWS Budgets</li>
+</ol>
+<details><summary>答えと解説を見る</summary><div class="ans">
+<p class="ok">正解：ア　Amazon SageMaker Savings Plans</p>
+<p>Amazon SageMaker Savings Plansは、1年か3年の利用金額の約束で、Amazon SageMaker AIの対象となる利用に割引を適用する。EC2 Instance Savings PlansはEC2が対象で、AWS Budgetsは予算の監視をするだけで料金そのものは下げない。</p>
+</div></details>
+</section>
+<section class="card" id="q10">
+<div class="qno">第4章　問10</div>
+<p class="qtext">ある会社は、夜間に大量の画像を変換するバッチ処理を行う。処理は途中で止まっても後からやり直せ、開始時刻にも余裕がある。コストを最も抑えられる購入オプションはどれ？</p>
+<ol class="ch">
+<li>ア　オンデマンドインスタンス</li>
+<li>イ　Dedicated Instances</li>
+<li>ウ　3年のConvertibleリザーブドインスタンス</li>
+<li>エ　スポットインスタンス</li>
+</ol>
+<details><summary>答えと解説を見る</summary><div class="ans">
+<p class="ok">正解：エ　スポットインスタンス</p>
+<p>スポットインスタンスはAWSの空き容量を使うため大幅に安く、中断されてもやり直せる処理に向いている。オンデマンドは割引がなく、Dedicated Instancesは専用ハードウェアの分だけ高い。不定期のバッチに3年の契約は合わない。</p>
+</div></details>
+</section>
+<section class="card" id="q11">
+<div class="qno">第4章　問11</div>
+<p class="qtext">スポットインスタンスについて正しい説明はどれ？</p>
+<ol class="ch">
+<li>ア　一度起動すれば、利用者が止めるまで必ず動き続ける</li>
+<li>イ　AWSがその容量を必要とすると、事前の通知のうえで中断されることがある</li>
+<li>ウ　1年か3年の契約が必要である</li>
+<li>エ　オンデマンドインスタンスより料金が高い</li>
+</ol>
+<details><summary>答えと解説を見る</summary><div class="ans">
+<p class="ok">正解：イ　AWSがその容量を必要とすると、事前の通知のうえで中断されることがある</p>
+<p>スポットインスタンスは、AWSが容量を必要としたときに2分前の通知のうえで中断されることがある。その代わりオンデマンドより大幅に安く、長期の契約もいらない。</p>
+</div></details>
+</section>
+<section class="card" id="q12">
+<div class="qno">第4章　問12</div>
+<p class="qtext">ある会社は、物理サーバーのソケット数やコア数で数えるソフトウェアのライセンスを、そのままAWSに持ち込みたい。最も適したEC2のオプションはどれ？</p>
+<ol class="ch">
+<li>ア　Dedicated Hosts</li>
+<li>イ　Dedicated Instances</li>
+<li>ウ　スポットインスタンス</li>
+<li>エ　Compute Savings Plans</li>
+</ol>
+<details><summary>答えと解説を見る</summary><div class="ans">
+<p class="ok">正解：ア　Dedicated Hosts</p>
+<p>Dedicated Hostsは物理サーバー1台を丸ごと割り当て、ソケットやコアの数が見えるので、サーバー単位のライセンスを持ち込む（BYOL）のに向く。Dedicated Instancesも専用ハードウェアで動くが、物理サーバーの構成は見えず、どのサーバーに置くかも制御できない。</p>
+</div></details>
+</section>
+<section class="card" id="q13">
+<div class="qno">第4章　問13</div>
+<p class="qtext">Dedicated InstancesとDedicated Hostsの違いとして正しいものはどれ？</p>
+<ol class="ch">
+<li>ア　Dedicated Instancesは他の利用者と同じ物理サーバーを共有する</li>
+<li>イ　Dedicated Hostsはスポット価格でしか買えない</li>
+<li>ウ　Dedicated Hostsでは物理サーバーが見え、インスタンスをどのサーバーに置くかを制御できる</li>
+<li>エ　Dedicated Instancesでは物理サーバーのソケット数を確認してライセンスに使える</li>
+</ol>
+<details><summary>答えと解説を見る</summary><div class="ans">
+<p class="ok">正解：ウ　Dedicated Hostsでは物理サーバーが見え、インスタンスをどのサーバーに置くかを制御できる</p>
+<p>どちらも他のAWSアカウントとハードウェアを共有しないが、Dedicated Hostsは物理サーバーそのものが利用者に割り当てられ、配置やソケット・コア数を把握できる。Dedicated Instancesは専用ハードウェアで動くだけで、物理サーバーの管理はできない。</p>
+</div></details>
+</section>
+<section class="card" id="q14">
+<div class="qno">第4章　問14</div>
+<p class="qtext">ある会社は、年に一度の大型セールの期間だけ、特定のAZで確実にEC2を起動できるようにしておきたい。長期の契約はしたくない。最も適したものはどれ？</p>
+<ol class="ch">
+<li>ア　3年のリザーブドインスタンス</li>
+<li>イ　On-Demand Capacity Reservations</li>
+<li>ウ　スポットインスタンス</li>
+<li>エ　EC2 Instance Savings Plans</li>
+</ol>
+<details><summary>答えと解説を見る</summary><div class="ans">
+<p class="ok">正解：イ　On-Demand Capacity Reservations</p>
+<p>On-Demand Capacity Reservationsは、期間の約束なしに特定のAZで容量を予約でき、不要になれば取り消せる。リザーブドインスタンスやSavings Plansは1年か3年の約束が必要で、スポットインスタンスは起動や継続の保証がない。</p>
+</div></details>
+</section>
+<section class="card" id="q15">
+<div class="qno">第4章　問15</div>
+<p class="qtext">インターネットからAWSへのデータ転送（インバウンド）の料金について、一般的に正しいものはどれ？</p>
+<ol class="ch">
+<li>ア　転送量に応じて高額の料金がかかる</li>
+<li>イ　原則として料金はかからない</li>
+<li>ウ　リージョン内の転送より高い</li>
+<li>エ　1日の上限を超えると転送できなくなる</li>
+</ol>
+<details><summary>答えと解説を見る</summary><div class="ans">
+<p class="ok">正解：イ　原則として料金はかからない</p>
+<p>インターネットからAWSに入るデータ転送は、原則として無料。一方でAWSからインターネットへ出ていく転送（アウトバウンド）は、量に応じて料金がかかる。</p>
+</div></details>
+</section>
+<section class="card" id="q16">
+<div class="qno">第4章　問16（2つ選ぶ）</div>
+<p class="qtext">データ転送の料金が一般的に発生するものはどれ？2つ選んで。</p>
+<ol class="ch">
+<li>ア　Amazon EC2からインターネットへのデータ送信</li>
+<li>イ　インターネットからAmazon S3へのアップロード</li>
+<li>ウ　東京リージョンから別のリージョンへのデータ転送</li>
+<li>エ　AWS Pricing Calculatorで見積もりを作ること</li>
+<li>オ　AWS Budgetsのアラートを受け取ること</li>
+</ol>
+<details><summary>答えと解説を見る</summary><div class="ans">
+<p class="ok">正解：ア　Amazon EC2からインターネットへのデータ送信<br>ウ　東京リージョンから別のリージョンへのデータ転送</p>
+<p>AWSからインターネットへのアウトバウンド転送と、リージョン間の転送には料金がかかる。インターネットからのインバウンド転送は原則無料。Pricing Calculatorは無料のツールで、データ転送とは関係がない。</p>
+</div></details>
+</section>
+<section class="card" id="q17">
+<div class="qno">第4章　問17</div>
+<p class="qtext">同じリージョン内で、あるAZのEC2インスタンスから別のAZのEC2インスタンスへデータを送る場合の料金について正しいものはどれ？</p>
+<ol class="ch">
+<li>ア　同じリージョン内なので必ず無料になる</li>
+<li>イ　インターネットへの送信と同じ料金体系になる</li>
+<li>ウ　AZをまたぐ転送には料金がかかる</li>
+<li>エ　AZをまたぐ転送はできない</li>
+</ol>
+<details><summary>答えと解説を見る</summary><div class="ans">
+<p class="ok">正解：ウ　AZをまたぐ転送には料金がかかる</p>
+<p>同じリージョンの中でも、AZをまたぐデータ転送には料金がかかる。高可用性のために複数のAZに分けるのは大切だが、大量のデータをやり取りする設計では、このAZ間の転送料も見積もりに入れておく。</p>
+</div></details>
+</section>
+<section class="card" id="q18">
+<div class="qno">第4章　問18（2つ選ぶ）</div>
+<p class="qtext">Amazon S3の料金を決める要素として正しいものはどれ？2つ選んで。</p>
+<ol class="ch">
+<li>ア　保存しているデータの量と選んだストレージクラス</li>
+<li>イ　バケット名の文字数</li>
+<li>ウ　データを読み書きするリクエストの数</li>
+<li>エ　バケットを作った曜日</li>
+<li>オ　AWSアカウントのルートユーザーのメールアドレス</li>
+</ol>
+<details><summary>答えと解説を見る</summary><div class="ans">
+<p class="ok">正解：ア　保存しているデータの量と選んだストレージクラス<br>ウ　データを読み書きするリクエストの数</p>
+<p>S3の料金は、保存する量とストレージクラス、PUTやGETなどのリクエスト数、データの取り出しや外部への転送量などで決まる。バケット名や作成日、アカウントの情報は料金に関係しない。</p>
+</div></details>
+</section>
+<section class="card" id="q19">
+<div class="qno">第4章　問19</div>
+<p class="qtext">ほとんどアクセスしないが長期間残す必要があるログを、より安く保存したい。料金の考え方として正しいものはどれ？</p>
+<ol class="ch">
+<li>ア　アクセス頻度の低いデータ向けのストレージクラスは、保存料金が安い代わりに取り出しに料金や時間がかかることがある</li>
+<li>イ　ストレージクラスを変えても料金は変わらない</li>
+<li>ウ　アクセスが少ないデータほど保存料金が高くなる</li>
+<li>エ　ログはAWSの無料の領域に保存されるので料金はかからない</li>
+</ol>
+<details><summary>答えと解説を見る</summary><div class="ans">
+<p class="ok">正解：ア　アクセス頻度の低いデータ向けのストレージクラスは、保存料金が安い代わりに取り出しに料金や時間がかかることがある</p>
+<p>S3にはアクセス頻度に応じたストレージクラスがあり、まれにしか使わないデータ向けのクラスは保存単価が安い。その代わり、取り出しの料金や取り出しにかかる時間が増えることがあるので、使い方に合わせて選ぶ。</p>
+</div></details>
+</section>
+<section class="card" id="q20">
+<div class="qno">第4章　問20</div>
+<p class="qtext">2025年7月15日以降に作られた新しいAWSアカウントで選べる「無料プラン」の説明として正しいものはどれ？</p>
+<ol class="ch">
+<li>ア　すべてのAWSサービスを期間の制限なく無料で使える</li>
+<li>イ　クレジットを使って一部のサービスを試せ、有料プランにアップグレードしない限り料金は請求されない</li>
+<li>ウ　最初の月だけ、どのサービスも無制限に無料で使える</li>
+<li>エ　無料プランを選ぶと有料のサポートプランが自動で付く</li>
+</ol>
+<details><summary>答えと解説を見る</summary><div class="ans">
+<p class="ok">正解：イ　クレジットを使って一部のサービスを試せ、有料プランにアップグレードしない限り料金は請求されない</p>
+<p>新しいアカウントの無料プランでは、もらえるクレジットで対象のサービスを試せ、有料プランにアップグレードしない限り請求は発生しない。使えるサービスは一部に限られ、6か月の期間が過ぎるかクレジットを使い切ると無料プランは終わる。サポートプランは別の契約。</p>
+</div></details>
+</section>
+<div class="pager"><a href="technology.html">← テクノロジーとサービス</a><span></span></div>
+<div class="cta"><b>続きの920問は、アプリで解けます</b>
+iPhone アプリ「CLF一問一答」は、全1000問・すべて解説つき。間違えた問題をちょうどいい間隔で出し直す復習と、今の実力で合格できるかの予測つき。最初の80問は無料です。
+<br><a class="btn" href="https://apps.apple.com/jp/app/id6824628682">App Store で見る</a></div>
+</main>
+<footer><p>このページは個人が作成した非公式の練習問題で、Amazon Web Services, Inc. およびその関連会社とは関係ありません。問題はすべてオリジナルで、実際の試験問題ではありません。AWS および関連する名称は Amazon.com, Inc. またはその関連会社の商標です。</p><p>最終更新：2026-11-13　<a href="../">練習問題の一覧</a>　<a href="https://shooooogo0520.github.io/shikaku-apps/">サポート・お問い合わせ</a></p></footer>
+</body>
+</html>

@@ -1,0 +1,339 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AWS クラウドプラクティショナー（CLF-C02）の練習問題：セキュリティとコンプライアンス（20問・解説つき）</title>
+<meta name="description" content="AWS クラウドプラクティショナー（CLF-C02）の「セキュリティとコンプライアンス」の練習問題20問。すべてオリジナル問題で、答えと解説つき。スマホでそのまま解けます。">
+<link rel="canonical" href="https://shooooogo0520.github.io/shikaku-apps/practice/aws-clf/security.html">
+<meta property="og:title" content="AWS クラウドプラクティショナー（CLF-C02）の練習問題：セキュリティとコンプライアンス（20問・解説つき）">
+<meta property="og:description" content="AWS クラウドプラクティショナー（CLF-C02）の「セキュリティとコンプライアンス」の練習問題20問。すべてオリジナル問題で、答えと解説つき。スマホでそのまま解けます。">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://shooooogo0520.github.io/shikaku-apps/practice/aws-clf/security.html">
+<meta name="theme-color" content="#1E6BEB">
+<style>:root{--p:#1E6BEB;--bg:#f6f7f9;--card:#fff;--text:#14171c;--dim:#5d6570;--line:#e3e6ea;--ok:#1f9d55}
+@media (prefers-color-scheme:dark){:root{--bg:#0f1115;--card:#1a1d23;--text:#eef0f3;--dim:#a2a9b3;--line:#2b3038}}
+*{box-sizing:border-box}html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Yu Gothic UI","Noto Sans JP",sans-serif;line-height:1.75;font-size:16px}
+main{max-width:720px;margin:0 auto;padding:16px}
+header.top{background:var(--p);color:#fff;padding:20px 16px}
+header.top .in{max-width:720px;margin:0 auto}
+header.top a{color:#fff;opacity:.9;font-size:14px;text-decoration:none}
+h1{font-size:24px;line-height:1.4;margin:6px 0 4px}
+.lead{font-size:15px;opacity:.95;margin:0}
+h2{font-size:18px;margin:28px 0 10px}
+.card{background:var(--card);border-radius:14px;padding:16px;margin:12px 0;box-shadow:0 1px 2px rgba(0,0,0,.06)}
+.qno{font-size:13px;font-weight:700;color:var(--p)}
+.qtext{margin:4px 0 10px;font-weight:600}
+ol.ch{list-style:none;padding:0;margin:0}
+ol.ch li{padding:8px 10px 8px 2.2em;text-indent:-1.6em;border-top:1px solid var(--line)}
+details{margin-top:10px;border-radius:10px;background:var(--bg)}
+summary{cursor:pointer;padding:10px 12px;font-weight:700;color:var(--p);list-style:none}
+summary::-webkit-details-marker{display:none}
+summary::before{content:"▶ ";font-size:11px}
+details[open] summary::before{content:"▼ "}
+.ans{padding:0 12px 12px}
+.ans .ok{color:var(--ok);font-weight:700}
+.chapters a{display:flex;justify-content:space-between;gap:12px;padding:14px 4px;border-top:1px solid var(--line);color:var(--text);text-decoration:none}
+.chapters a:first-child{border-top:0}
+.chapters .n{color:var(--dim);white-space:nowrap}
+.cta{background:var(--card);border:2px solid var(--p);border-radius:14px;padding:16px;margin:28px 0}
+.cta b{display:block;font-size:17px;margin-bottom:6px}
+.btn{display:inline-block;margin-top:10px;background:var(--p);color:#fff;padding:12px 18px;border-radius:999px;text-decoration:none;font-weight:700}
+.pager{display:flex;justify-content:space-between;gap:12px;margin:20px 0}
+.pager a{color:var(--p);font-weight:700;text-decoration:none}
+footer{max-width:720px;margin:0 auto;padding:8px 16px 40px;color:var(--dim);font-size:13px}
+footer a{color:var(--dim)}</style>
+</head>
+<body>
+<header class="top"><div class="in"><a href="./">← CLF 一問一答 練習問題</a><h1>第2章　セキュリティとコンプライアンス</h1><p class="lead">20問・答えと解説つき（問題を読んでから「答えと解説を見る」を押す）</p></div></header>
+<main>
+<section class="card" id="q1">
+<div class="qno">第2章　問1</div>
+<p class="qtext">AWSの責任共有モデルで「クラウドのセキュリティ」（AWSの責任）に含まれるものはどれ？</p>
+<ol class="ch">
+<li>ア　IAMポリシーで付与する権限の範囲</li>
+<li>イ　EC2インスタンスのゲストOSへのパッチ適用</li>
+<li>ウ　AWSのデータセンターに設置された物理ホストの保守</li>
+<li>エ　S3バケットに保存するデータの分類</li>
+</ol>
+<details><summary>答えと解説を見る</summary><div class="ans">
+<p class="ok">正解：ウ　AWSのデータセンターに設置された物理ホストの保守</p>
+<p>AWSはクラウドを動かす施設・ハードウェア・ネットワーク・仮想化基盤を守る責任を持つ。IAMの権限設定、ゲストOSのパッチ、データの分類は利用者側の「クラウドにおけるセキュリティ」に当たる。</p>
+</div></details>
+</section>
+<section class="card" id="q2">
+<div class="qno">第2章　問2</div>
+<p class="qtext">ある会社はAmazon EC2でWebサーバーを動かしている。責任共有モデルで、この会社が担当するものはどれ？</p>
+<ol class="ch">
+<li>ア　ハイパーバイザーの脆弱性対応</li>
+<li>イ　データセンターへの入館管理</li>
+<li>ウ　ホストサーバーのディスクの物理的な廃棄</li>
+<li>エ　インスタンス上のOSとアプリケーションの更新</li>
+</ol>
+<details><summary>答えと解説を見る</summary><div class="ans">
+<p class="ok">正解：エ　インスタンス上のOSとアプリケーションの更新</p>
+<p>EC2はIaaSなので、ゲストOSから上（OS・ミドルウェア・アプリ）の更新は利用者の責任になる。ハイパーバイザー、入館管理、物理ディスクの廃棄はAWSが担当する。</p>
+</div></details>
+</section>
+<section class="card" id="q3">
+<div class="qno">第2章　問3</div>
+<p class="qtext">Amazon RDSを使う場合、責任共有モデルでAWSが担当するものはどれ？</p>
+<ol class="ch">
+<li>ア　データベースエンジンが動くOSへのパッチ適用</li>
+<li>イ　データベースのユーザーとそのパスワードの管理</li>
+<li>ウ　データベースへ接続を許可するセキュリティグループの設定</li>
+<li>エ　どのテーブルに個人情報を入れるかの判断</li>
+</ol>
+<details><summary>答えと解説を見る</summary><div class="ans">
+<p class="ok">正解：ア　データベースエンジンが動くOSへのパッチ適用</p>
+<p>RDSはマネージドサービスなので、基盤のOSやデータベースエンジンのパッチ適用はAWSが行う（利用者はメンテナンスウィンドウを選べる）。DBユーザー、セキュリティグループ、保存するデータの扱いは利用者の責任。</p>
+</div></details>
+</section>
+<section class="card" id="q4">
+<div class="qno">第2章　問4</div>
+<p class="qtext">AWS Lambdaで関数を動かす場合、責任共有モデルで利用者が担当するものはどれ？</p>
+<ol class="ch">
+<li>ア　関数を実行するサーバーのOSの更新</li>
+<li>イ　関数のコードと、関数に付与するIAMロールの権限</li>
+<li>ウ　実行環境のランタイムを動かす物理ホストの管理</li>
+<li>エ　関数を実行するためのキャパシティの物理的な調達</li>
+</ol>
+<details><summary>答えと解説を見る</summary><div class="ans">
+<p class="ok">正解：イ　関数のコードと、関数に付与するIAMロールの権限</p>
+<p>Lambdaではサーバー・OS・実行基盤はAWSが管理するため、利用者が担うのは主に自分のコードと、関数に与える権限（IAM）、扱うデータになる。OSや物理ホスト、キャパシティの調達はAWSの担当。</p>
+</div></details>
+</section>
+<section class="card" id="q5">
+<div class="qno">第2章　問5</div>
+<p class="qtext">Amazon EC2、Amazon RDS、AWS Lambdaを比べたとき、利用者が担当するセキュリティ作業が一般的に最も多いのはどれ？</p>
+<ol class="ch">
+<li>ア　Amazon EC2</li>
+<li>イ　Amazon RDS</li>
+<li>ウ　AWS Lambda</li>
+<li>エ　3つとも同じ</li>
+</ol>
+<details><summary>答えと解説を見る</summary><div class="ans">
+<p class="ok">正解：ア　Amazon EC2</p>
+<p>EC2は利用者がOS以上を管理するため、パッチ適用やソフトウェアの設定など担当範囲が最も広い。RDSやLambdaのようにマネージド度が高いサービスほど、AWSの担当範囲が広がり利用者の作業は減る。</p>
+</div></details>
+</section>
+<section class="card" id="q6">
+<div class="qno">第2章　問6</div>
+<p class="qtext">責任共有モデルで、AWSと利用者の両方が責任を持つ「共有コントロール」の例はどれ？</p>
+<ol class="ch">
+<li>ア　物理的・環境的なコントロール</li>
+<li>イ　データセンターの電源と空調</li>
+<li>ウ　利用者のデータの分類</li>
+<li>エ　パッチ管理</li>
+</ol>
+<details><summary>答えと解説を見る</summary><div class="ans">
+<p class="ok">正解：エ　パッチ管理</p>
+<p>パッチ管理は共有コントロールの例で、AWSはインフラのパッチを、利用者はゲストOSやアプリのパッチを担当する。物理的・環境的なコントロールはAWSから引き継ぐもの、データの分類は利用者固有の責任。</p>
+</div></details>
+</section>
+<section class="card" id="q7">
+<div class="qno">第2章　問7</div>
+<p class="qtext">Amazon S3を使う場合、責任共有モデルで利用者が担当するものはどれ？</p>
+<ol class="ch">
+<li>ア　S3を構成するストレージ機器の冗長化</li>
+<li>イ　S3のサービス自体を動かすソフトウェアの更新</li>
+<li>ウ　バケットポリシーやパブリックアクセスの設定</li>
+<li>エ　S3が置かれた施設の監視カメラの運用</li>
+</ol>
+<details><summary>答えと解説を見る</summary><div class="ans">
+<p class="ok">正解：ウ　バケットポリシーやパブリックアクセスの設定</p>
+<p>S3では、誰にアクセスを許すか（バケットポリシー、ブロックパブリックアクセスなど）や暗号化の選び方は利用者が決める。ストレージ機器の冗長化、サービスのソフトウェア、施設の監視はAWSの担当。</p>
+</div></details>
+</section>
+<section class="card" id="q8">
+<div class="qno">第2章　問8</div>
+<p class="qtext">EC2インスタンスに接続したEBSボリュームの暗号化について、責任共有モデルの考え方として正しいものはどれ？</p>
+<ol class="ch">
+<li>ア　AWSがすべてのボリュームの暗号化キーを利用者に代わって選ぶ責任を持つ</li>
+<li>イ　暗号化を有効にするかどうかは利用者が決めて設定する</li>
+<li>ウ　暗号化はAWSの責任なので利用者は何もできない</li>
+<li>エ　暗号化の設定は物理的なセキュリティの一部としてAWSが行う</li>
+</ol>
+<details><summary>答えと解説を見る</summary><div class="ans">
+<p class="ok">正解：イ　暗号化を有効にするかどうかは利用者が決めて設定する</p>
+<p>AWSは暗号化の仕組み（機能）を提供するが、それを使うかどうか、どのキーを使うかを決めて設定するのは利用者の責任。データを守る設定は「クラウドにおけるセキュリティ」に当たる。</p>
+</div></details>
+</section>
+<section class="card" id="q9">
+<div class="qno">第2章　問9</div>
+<p class="qtext">責任共有モデルで、利用者がどのサービスを使う場合でも常に利用者の責任になるものはどれ？</p>
+<ol class="ch">
+<li>ア　利用者のデータと、そのデータへのアクセス権の管理</li>
+<li>イ　グローバルインフラストラクチャの可用性</li>
+<li>ウ　仮想化レイヤーの分離</li>
+<li>エ　ネットワーク機器のファームウェアの更新</li>
+</ol>
+<details><summary>答えと解説を見る</summary><div class="ans">
+<p class="ok">正解：ア　利用者のデータと、そのデータへのアクセス権の管理</p>
+<p>どのサービスでも、自分のデータの扱いと、誰がそれにアクセスできるか（IAMなど）の管理は利用者の責任として残る。インフラの可用性、仮想化の分離、ネットワーク機器の更新はAWSが担当する。</p>
+</div></details>
+</section>
+<section class="card" id="q10">
+<div class="qno">第2章　問10（2つ選ぶ）</div>
+<p class="qtext">責任共有モデルについて正しい説明を選べ。2つ選んで。</p>
+<ol class="ch">
+<li>ア　AWSは利用者のIAMユーザーに付与する権限を決める</li>
+<li>イ　AWSはハードウェアやグローバルインフラストラクチャのセキュリティに責任を持つ</li>
+<li>ウ　利用者はAWSのデータセンターの物理的なアクセス管理を行う</li>
+<li>エ　マネージドサービスほど、利用者が担当する範囲は小さくなる傾向がある</li>
+<li>オ　サービスを問わず、OSのパッチ適用は常にAWSが行う</li>
+</ol>
+<details><summary>答えと解説を見る</summary><div class="ans">
+<p class="ok">正解：イ　AWSはハードウェアやグローバルインフラストラクチャのセキュリティに責任を持つ<br>エ　マネージドサービスほど、利用者が担当する範囲は小さくなる傾向がある</p>
+<p>AWSはハードウェアやグローバルインフラを守り、マネージド度が高いサービスほど利用者の担当範囲は小さくなる。物理アクセスはAWSの担当、EC2のゲストOSのパッチは利用者の担当、IAMの権限も利用者が決める。</p>
+</div></details>
+</section>
+<section class="card" id="q11">
+<div class="qno">第2章　問11</div>
+<p class="qtext">セキュリティグループのルールを誤って全開放にしたため、EC2インスタンスが外部から攻撃を受けた。責任共有モデルでこの設定の責任を持つのは誰？</p>
+<ol class="ch">
+<li>ア　AWS</li>
+<li>イ　AWS Marketplaceの販売者</li>
+<li>ウ　利用者</li>
+<li>エ　インターネットサービスプロバイダー</li>
+</ol>
+<details><summary>答えと解説を見る</summary><div class="ans">
+<p class="ok">正解：ウ　利用者</p>
+<p>セキュリティグループなどのファイアウォール設定は利用者が行うため、誤った設定の責任は利用者にある。AWSはセキュリティグループという機能そのものが正しく動くことに責任を持つ。</p>
+</div></details>
+</section>
+<section class="card" id="q12">
+<div class="qno">第2章　問12</div>
+<p class="qtext">AWSが管理するインフラについて、利用者が自社の監査で使う「AWSから引き継ぐコントロール（継承されたコントロール）」の例はどれ？</p>
+<ol class="ch">
+<li>ア　アプリケーションの入力値チェック</li>
+<li>イ　IAMユーザーのパスワードポリシー</li>
+<li>ウ　ゲストOSのファイアウォール設定</li>
+<li>エ　データセンターの物理的・環境的なコントロール</li>
+</ol>
+<details><summary>答えと解説を見る</summary><div class="ans">
+<p class="ok">正解：エ　データセンターの物理的・環境的なコントロール</p>
+<p>物理的・環境的なコントロールはAWSが完全に実施しており、利用者はそれをそのまま引き継いで自社のコンプライアンスに使える。入力値チェック、パスワードポリシー、ゲストOSの設定は利用者が実施するもの。</p>
+</div></details>
+</section>
+<section class="card" id="q13">
+<div class="qno">第2章　問13</div>
+<p class="qtext">監査人から、AWSのSOCレポートやISO認証の証明書を提出するよう求められた。これらの資料をダウンロードできるサービスはどれ？</p>
+<ol class="ch">
+<li>ア　AWS Config</li>
+<li>イ　AWS Artifact</li>
+<li>ウ　Amazon Inspector</li>
+<li>エ　AWS Trusted Advisor</li>
+</ol>
+<details><summary>答えと解説を見る</summary><div class="ans">
+<p class="ok">正解：イ　AWS Artifact</p>
+<p>AWS Artifactは、AWSの第三者監査レポート（SOC、PCIなど）や認証の資料をセルフサービスで入手できるポータル。Configは自分のリソース設定の記録、Inspectorは脆弱性の検査、Trusted Advisorはベストプラクティスの確認に使う。</p>
+</div></details>
+</section>
+<section class="card" id="q14">
+<div class="qno">第2章　問14</div>
+<p class="qtext">ある医療系の会社は、AWSとHIPAAに関するBusiness Associate Addendum（BAA）などの契約を確認・締結したい。どのサービスを使うべき？</p>
+<ol class="ch">
+<li>ア　AWS Artifact</li>
+<li>イ　AWS Audit Manager</li>
+<li>ウ　AWS Organizations</li>
+<li>エ　AWS Control Tower</li>
+</ol>
+<details><summary>答えと解説を見る</summary><div class="ans">
+<p class="ok">正解：ア　AWS Artifact</p>
+<p>AWS Artifactにはレポートのほかに「契約（Agreements）」の機能があり、BAAなどのAWSとの契約を確認・受け入れ・管理できる。Audit Managerは自社の監査証跡の収集、OrganizationsとControl Towerは複数アカウントの管理に使う。</p>
+</div></details>
+</section>
+<section class="card" id="q15">
+<div class="qno">第2章　問15</div>
+<p class="qtext">「先週の金曜日に誰がS3バケットを削除したか」を調べたい。どのサービスの記録を見るべき？</p>
+<ol class="ch">
+<li>ア　Amazon CloudWatch のメトリクス</li>
+<li>イ　AWS Artifact</li>
+<li>ウ　Amazon Macie</li>
+<li>エ　AWS CloudTrail</li>
+</ol>
+<details><summary>答えと解説を見る</summary><div class="ans">
+<p class="ok">正解：エ　AWS CloudTrail</p>
+<p>AWS CloudTrailはAWSアカウント内のAPI呼び出し（誰が・いつ・どこから・何をしたか）を記録するので、削除操作の実行者を追跡できる。CloudWatchのメトリクスは性能の数値、Artifactは監査資料、MacieはS3内の機密データの検出に使う。</p>
+</div></details>
+</section>
+<section class="card" id="q16">
+<div class="qno">第2章　問16</div>
+<p class="qtext">リソースの設定が時間とともにどう変わったかを記録し、「EBSボリュームが暗号化されているか」などのルールに沿っているかを継続的に評価できるサービスはどれ？</p>
+<ol class="ch">
+<li>ア　AWS CloudTrail</li>
+<li>イ　AWS Shield</li>
+<li>ウ　AWS Config</li>
+<li>エ　Amazon Cognito</li>
+</ol>
+<details><summary>答えと解説を見る</summary><div class="ans">
+<p class="ok">正解：ウ　AWS Config</p>
+<p>AWS Configはリソースの設定の履歴を記録し、Configルールで望ましい設定に準拠しているかを評価する。CloudTrailは「誰が操作したか」のAPI記録が中心で、設定の準拠評価そのものはConfigの役割。</p>
+</div></details>
+</section>
+<section class="card" id="q17">
+<div class="qno">第2章　問17</div>
+<p class="qtext">AWS CloudTrailとAWS Configの違いの説明として正しいものはどれ？</p>
+<ol class="ch">
+<li>ア　CloudTrailはAPIの操作履歴を、Configはリソースの設定状態とその変化を記録する</li>
+<li>イ　CloudTrailはリソースの設定状態を、ConfigはAPIの操作履歴を記録する</li>
+<li>ウ　どちらもネットワークの通信内容（パケット）を記録する</li>
+<li>エ　どちらもAWSの第三者監査レポートを提供する</li>
+</ol>
+<details><summary>答えと解説を見る</summary><div class="ans">
+<p class="ok">正解：ア　CloudTrailはAPIの操作履歴を、Configはリソースの設定状態とその変化を記録する</p>
+<p>CloudTrailは「誰が何の操作をしたか」、Configは「リソースがどんな設定で、いつどう変わったか」に注目する。組み合わせると、設定変更とそれを行った人を結びつけて調べられる。</p>
+</div></details>
+</section>
+<section class="card" id="q18">
+<div class="qno">第2章　問18</div>
+<p class="qtext">ある会社は、自社のAWSアカウントの設定がPCI DSSなどのセキュリティ基準に沿っているかを自動でチェックし、結果を1か所で確認したい。どのサービスが最適？</p>
+<ol class="ch">
+<li>ア　AWS Artifact</li>
+<li>イ　AWS Security Hub</li>
+<li>ウ　Amazon Detective</li>
+<li>エ　AWS Firewall Manager</li>
+</ol>
+<details><summary>答えと解説を見る</summary><div class="ans">
+<p class="ok">正解：イ　AWS Security Hub</p>
+<p>AWS Security Hub（設定のチェック機能は AWS Security Hub CSPM）は、AWSのベストプラクティスやPCI DSSなどの基準に沿ってアカウントの設定を自動でチェックし、結果をまとめて表示する。ArtifactはAWS自身の監査レポートを入手する場、Detectiveはセキュリティの問題の調査、Firewall ManagerはWAFなどのルールの一括管理に使う。</p>
+</div></details>
+</section>
+<section class="card" id="q19">
+<div class="qno">第2章　問19</div>
+<p class="qtext">AWS Organizationsのサービスコントロールポリシー（SCP）の説明として正しいものはどれ？</p>
+<ol class="ch">
+<li>ア　個々のIAMユーザーに権限を付与するためのポリシー</li>
+<li>イ　EC2インスタンスへの通信を許可・拒否するファイアウォールのルール</li>
+<li>ウ　メンバーアカウントで使える権限の上限を定めるもので、それ自体は権限を付与しない</li>
+<li>エ　S3バケットに付けて外部アカウントにアクセスを許可するポリシー</li>
+</ol>
+<details><summary>答えと解説を見る</summary><div class="ans">
+<p class="ok">正解：ウ　メンバーアカウントで使える権限の上限を定めるもので、それ自体は権限を付与しない</p>
+<p>SCPは組織内のアカウントで「使える操作の最大範囲」を決めるガードレールで、実際の権限はIAMポリシーなどで別に与える必要がある。ファイアウォールのルールはセキュリティグループなど、バケットに付けるのはバケットポリシー。</p>
+</div></details>
+</section>
+<section class="card" id="q20">
+<div class="qno">第2章　問20</div>
+<p class="qtext">ある会社は、組織内のすべての開発用アカウントで、特定のリージョン以外にリソースを作れないようにしたい。各アカウントの管理者でもこの制限を外せないようにするには、何を使うべき？</p>
+<ol class="ch">
+<li>ア　各アカウントのIAMユーザーにパスワードポリシーを設定する</li>
+<li>イ　セキュリティグループ</li>
+<li>ウ　AWS Trusted Advisorのチェック</li>
+<li>エ　AWS Organizationsのサービスコントロールポリシー（SCP）</li>
+</ol>
+<details><summary>答えと解説を見る</summary><div class="ans">
+<p class="ok">正解：エ　AWS Organizationsのサービスコントロールポリシー（SCP）</p>
+<p>SCPはOUやアカウント単位で適用され、メンバーアカウント内の管理者を含むすべてのユーザーとロールの操作範囲を制限できる。パスワードポリシーやセキュリティグループでは操作できるリージョンを組織全体で制限できず、Trusted Advisorは確認だけで制限はしない。</p>
+</div></details>
+</section>
+<div class="pager"><a href="concepts.html">← クラウドの概念</a><a href="technology.html">テクノロジーとサービス →</a></div>
+<div class="cta"><b>続きの920問は、アプリで解けます</b>
+iPhone アプリ「CLF一問一答」は、全1000問・すべて解説つき。間違えた問題をちょうどいい間隔で出し直す復習と、今の実力で合格できるかの予測つき。最初の80問は無料です。
+<br><a class="btn" href="https://apps.apple.com/jp/app/id6824628682">App Store で見る</a></div>
+</main>
+<footer><p>このページは個人が作成した非公式の練習問題で、Amazon Web Services, Inc. およびその関連会社とは関係ありません。問題はすべてオリジナルで、実際の試験問題ではありません。AWS および関連する名称は Amazon.com, Inc. またはその関連会社の商標です。</p><p>最終更新：2026-11-13　<a href="../">練習問題の一覧</a>　<a href="https://shooooogo0520.github.io/shikaku-apps/">サポート・お問い合わせ</a></p></footer>
+</body>
+</html>

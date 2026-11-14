@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AWS クラウドプラクティショナー（CLF-C02）の練習問題：テクノロジーとサービス（20問・解説つき）</title>
+<meta name="description" content="AWS クラウドプラクティショナー（CLF-C02）の「テクノロジーとサービス」の練習問題20問。すべてオリジナル問題で、答えと解説つき。スマホでそのまま解けます。">
+<link rel="canonical" href="https://shooooogo0520.github.io/shikaku-apps/practice/aws-clf/technology.html">
+<meta property="og:title" content="AWS クラウドプラクティショナー（CLF-C02）の練習問題：テクノロジーとサービス（20問・解説つき）">
+<meta property="og:description" content="AWS クラウドプラクティショナー（CLF-C02）の「テクノロジーとサービス」の練習問題20問。すべてオリジナル問題で、答えと解説つき。スマホでそのまま解けます。">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://shooooogo0520.github.io/shikaku-apps/practice/aws-clf/technology.html">
+<meta name="theme-color" content="#1E6BEB">
+<style>:root{--p:#1E6BEB;--bg:#f6f7f9;--card:#fff;--text:#14171c;--dim:#5d6570;--line:#e3e6ea;--ok:#1f9d55}
+@media (prefers-color-scheme:dark){:root{--bg:#0f1115;--card:#1a1d23;--text:#eef0f3;--dim:#a2a9b3;--line:#2b3038}}
+*{box-sizing:border-box}html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Yu Gothic UI","Noto Sans JP",sans-serif;line-height:1.75;font-size:16px}
+main{max-width:720px;margin:0 auto;padding:16px}
+header.top{background:var(--p);color:#fff;padding:20px 16px}
+header.top .in{max-width:720px;margin:0 auto}
+header.top a{color:#fff;opacity:.9;font-size:14px;text-decoration:none}
+h1{font-size:24px;line-height:1.4;margin:6px 0 4px}
+.lead{font-size:15px;opacity:.95;margin:0}
+h2{font-size:18px;margin:28px 0 10px}
+.card{background:var(--card);border-radius:14px;padding:16px;margin:12px 0;box-shadow:0 1px 2px rgba(0,0,0,.06)}
+.qno{font-size:13px;font-weight:700;color:var(--p)}
+.qtext{margin:4px 0 10px;font-weight:600}
+ol.ch{list-style:none;padding:0;margin:0}
+ol.ch li{padding:8px 10px 8px 2.2em;text-indent:-1.6em;border-top:1px solid var(--line)}
+details{margin-top:10px;border-radius:10px;background:var(--bg)}
+summary{cursor:pointer;padding:10px 12px;font-weight:700;color:var(--p);list-style:none}
+summary::-webkit-details-marker{display:none}
+summary::before{content:"▶ ";font-size:11px}
+details[open] summary::before{content:"▼ "}
+.ans{padding:0 12px 12px}
+.ans .ok{color:var(--ok);font-weight:700}
+.chapters a{display:flex;justify-content:space-between;gap:12px;padding:14px 4px;border-top:1px solid var(--line);color:var(--text);text-decoration:none}
+.chapters a:first-child{border-top:0}
+.chapters .n{color:var(--dim);white-space:nowrap}
+.cta{background:var(--card);border:2px solid var(--p);border-radius:14px;padding:16px;margin:28px 0}
+.cta b{display:block;font-size:17px;margin-bottom:6px}
+.btn{display:inline-block;margin-top:10px;background:var(--p);color:#fff;padding:12px 18px;border-radius:999px;text-decoration:none;font-weight:700}
+.pager{display:flex;justify-content:space-between;gap:12px;margin:20px 0}
+.pager a{color:var(--p);font-weight:700;text-decoration:none}
+footer{max-width:720px;margin:0 auto;padding:8px 16px 40px;color:var(--dim);font-size:13px}
+footer a{color:var(--dim)}</style>
+</head>
+<body>
+<header class="top"><div class="in"><a href="./">← CLF 一問一答 練習問題</a><h1>第3章　テクノロジーとサービス</h1><p class="lead">20問・答えと解説つき（問題を読んでから「答えと解説を見る」を押す）</p></div></header>
+<main>
+<section class="card" id="q1">
+<div class="qno">第3章　問1</div>
+<p class="qtext">JSONやYAMLで書いたテンプレートから、AWSのリソースをまとめて作成・更新できるサービスはどれ？</p>
+<ol class="ch">
+<li>ア　Amazon CloudWatch</li>
+<li>イ　AWS CloudFormation</li>
+<li>ウ　AWS Elastic Beanstalk</li>
+<li>エ　AWS Systems Manager</li>
+</ol>
+<details><summary>答えと解説を見る</summary><div class="ans">
+<p class="ok">正解：イ　AWS CloudFormation</p>
+<p>AWS CloudFormation はテンプレートに書いた構成どおりにリソース（スタック）を作るIaCのサービス。CloudWatch は監視、Systems Manager はサーバーの運用管理で、テンプレートからの構築が主目的ではない。</p>
+</div></details>
+</section>
+<section class="card" id="q2">
+<div class="qno">第3章　問2</div>
+<p class="qtext">開発チームが、TypeScriptやPythonなどのふだん使っているプログラミング言語でインフラを定義したいと考えている。どのサービスが最適？</p>
+<ol class="ch">
+<li>ア　AWS CLI</li>
+<li>イ　Amazon API Gateway</li>
+<li>ウ　AWS Cloud Development Kit (AWS CDK)</li>
+<li>エ　AWS Management Console</li>
+</ol>
+<details><summary>答えと解説を見る</summary><div class="ans">
+<p class="ok">正解：ウ　AWS Cloud Development Kit (AWS CDK)</p>
+<p>AWS CDK はプログラミング言語でインフラを定義し、内部で CloudFormation のテンプレートに変換してデプロイする。AWS CLI はコマンドで操作する道具で、インフラ全体をコードとして定義する仕組みではない。</p>
+</div></details>
+</section>
+<section class="card" id="q3">
+<div class="qno">第3章　問3</div>
+<p class="qtext">ある開発者は、Webアプリのコードをアップロードするだけで、サーバーの用意・負荷分散・スケーリングをAWSに任せたい。必要ならEC2の設定にも手を入れたい。どのサービスが最適？</p>
+<ol class="ch">
+<li>ア　AWS Elastic Beanstalk</li>
+<li>イ　Amazon Lightsail</li>
+<li>ウ　AWS Batch</li>
+<li>エ　Amazon EC2 Auto Scaling</li>
+</ol>
+<details><summary>答えと解説を見る</summary><div class="ans">
+<p class="ok">正解：ア　AWS Elastic Beanstalk</p>
+<p>Elastic Beanstalk はコードを渡すと、EC2・ロードバランサー・Auto Scaling などの環境を自動で作って運用してくれる。裏のリソースは利用者のアカウントにあるので設定も変えられる。EC2 Auto Scaling は台数の調整だけで、アプリの環境全体は作らない。</p>
+</div></details>
+</section>
+<section class="card" id="q4">
+<div class="qno">第3章　問4</div>
+<p class="qtext">数百台のEC2インスタンスとオンプレミスのサーバーに、OSのパッチ適用やコマンドの実行をまとめて行いたい。どのサービスが最適？</p>
+<ol class="ch">
+<li>ア　AWS CloudFormation</li>
+<li>イ　Amazon Inspector</li>
+<li>ウ　AWS Config</li>
+<li>エ　AWS Systems Manager</li>
+</ol>
+<details><summary>答えと解説を見る</summary><div class="ans">
+<p class="ok">正解：エ　AWS Systems Manager</p>
+<p>AWS Systems Manager は、EC2やオンプレミスのサーバーをまとめて管理し、パッチ適用やコマンド実行を一括で行える。CloudFormation はリソースの構築、AWS Config は設定の記録と評価が目的。</p>
+</div></details>
+</section>
+<section class="card" id="q5">
+<div class="qno">第3章　問5</div>
+<p class="qtext">運用担当者が、毎晩同じ手順で行っているAWSの作業をシェルスクリプトにして自動で実行したい。最も適した操作方法はどれ？</p>
+<ol class="ch">
+<li>ア　AWS Management Console</li>
+<li>イ　AWS CLI</li>
+<li>ウ　AWS Pricing Calculator</li>
+<li>エ　Amazon WorkSpaces</li>
+</ol>
+<details><summary>答えと解説を見る</summary><div class="ans">
+<p class="ok">正解：イ　AWS CLI</p>
+<p>AWS CLI はコマンドでAWSを操作できるので、スクリプトに組み込んで繰り返し実行できる。Management Console はブラウザの画面で手作業する方法で、くり返しの自動化には向かない。</p>
+</div></details>
+</section>
+<section class="card" id="q6">
+<div class="qno">第3章　問6</div>
+<p class="qtext">自社のJavaアプリの中から、S3へのファイル保存やDynamoDBへの書き込みを行いたい。何を使うのが最適？</p>
+<ol class="ch">
+<li>ア　AWS Elastic Beanstalk</li>
+<li>イ　AWS SDK</li>
+<li>ウ　AWS Management Console</li>
+<li>エ　AWS CloudShell</li>
+</ol>
+<details><summary>答えと解説を見る</summary><div class="ans">
+<p class="ok">正解：イ　AWS SDK</p>
+<p>AWS SDK は各プログラミング言語からAWSのAPIを呼び出すためのライブラリで、アプリのコードに組み込んで使う。CloudShell やコンソールは人が操作するための道具で、アプリの中からは使わない。</p>
+</div></details>
+</section>
+<section class="card" id="q7">
+<div class="qno">第3章　問7（2つ選ぶ）</div>
+<p class="qtext">インフラをコードで管理する（Infrastructure as Code）利点として正しいものはどれ？2つ選んで。</p>
+<ol class="ch">
+<li>ア　同じ構成の環境を何度でも同じように作れる</li>
+<li>イ　AWSの利用料金が自動的に無料になる</li>
+<li>ウ　インフラの変更履歴をバージョン管理できる</li>
+<li>エ　リージョンを選ばなくてもよくなる</li>
+<li>オ　サーバーのOSのパッチが不要になる</li>
+</ol>
+<details><summary>答えと解説を見る</summary><div class="ans">
+<p class="ok">正解：ア　同じ構成の環境を何度でも同じように作れる<br>ウ　インフラの変更履歴をバージョン管理できる</p>
+<p>IaCでは構成をファイルに書くため、開発・本番などの環境を同じように再現でき、Gitなどで変更履歴も管理できる。料金が無くなったり、リージョンやパッチの管理が不要になったりはしない。</p>
+</div></details>
+</section>
+<section class="card" id="q8">
+<div class="qno">第3章　問8</div>
+<p class="qtext">機械学習モデルの学習のために、GPUを搭載したEC2インスタンスを使いたい。どのインスタンスファミリーを選ぶ？</p>
+<ol class="ch">
+<li>ア　汎用</li>
+<li>イ　コンピューティング最適化</li>
+<li>ウ　メモリ最適化</li>
+<li>エ　高速コンピューティング</li>
+</ol>
+<details><summary>答えと解説を見る</summary><div class="ans">
+<p class="ok">正解：エ　高速コンピューティング</p>
+<p>高速コンピューティング（Accelerated Computing）はGPUなどのアクセラレーターを積んだインスタンスで、機械学習やグラフィックス処理に向く。コンピューティング最適化は高性能なCPUが中心で、GPUは持たない。</p>
+</div></details>
+</section>
+<section class="card" id="q9">
+<div class="qno">第3章　問9</div>
+<p class="qtext">大量のデータをメモリ上に載せて処理するインメモリデータベースをEC2で動かしたい。どのインスタンスファミリーが最適？</p>
+<ol class="ch">
+<li>ア　ストレージ最適化</li>
+<li>イ　メモリ最適化</li>
+<li>ウ　コンピューティング最適化</li>
+<li>エ　汎用</li>
+</ol>
+<details><summary>答えと解説を見る</summary><div class="ans">
+<p class="ok">正解：イ　メモリ最適化</p>
+<p>メモリ最適化インスタンスはCPUに対してメモリが多く、大きなデータをメモリで扱う処理に向く。ストレージ最適化はローカルディスクへの高速な読み書き、コンピューティング最適化はCPUを多く使う処理向け。</p>
+</div></details>
+</section>
+<section class="card" id="q10">
+<div class="qno">第3章　問10</div>
+<p class="qtext">動画のエンコードや科学計算など、CPUの処理能力を多く使うワークロードに最も適したEC2インスタンスファミリーはどれ？</p>
+<ol class="ch">
+<li>ア　コンピューティング最適化</li>
+<li>イ　メモリ最適化</li>
+<li>ウ　ストレージ最適化</li>
+<li>エ　汎用</li>
+</ol>
+<details><summary>答えと解説を見る</summary><div class="ans">
+<p class="ok">正解：ア　コンピューティング最適化</p>
+<p>コンピューティング最適化インスタンスは高性能なプロセッサを持ち、CPU負荷の高い処理に向く。汎用はCPU・メモリ・ネットワークのバランス型で、特定の負荷に特化していない。</p>
+</div></details>
+</section>
+<section class="card" id="q11">
+<div class="qno">第3章　問11</div>
+<p class="qtext">OS・設定・インストール済みのソフトウェアを含み、EC2インスタンスを起動するときのひな形になるものはどれ？</p>
+<ol class="ch">
+<li>ア　EBSスナップショット</li>
+<li>イ　セキュリティグループ</li>
+<li>ウ　Amazon マシンイメージ（AMI）</li>
+<li>エ　インスタンスプロファイル</li>
+</ol>
+<details><summary>答えと解説を見る</summary><div class="ans">
+<p class="ok">正解：ウ　Amazon マシンイメージ（AMI）</p>
+<p>AMI はインスタンスの起動に必要なOSやソフトウェアをまとめたイメージで、同じ構成のインスタンスを何台でも起動できる。EBSスナップショットはボリュームのバックアップ、セキュリティグループは通信の許可ルール。</p>
+</div></details>
+</section>
+<section class="card" id="q12">
+<div class="qno">第3章　問12</div>
+<p class="qtext">ECサイトのアクセスが昼に増えて夜に減る。負荷に合わせてEC2インスタンスの台数を自動で増減したい。どのサービスが最適？</p>
+<ol class="ch">
+<li>ア　Amazon EC2 Auto Scaling</li>
+<li>イ　Amazon Route 53</li>
+<li>ウ　AWS Systems Manager</li>
+<li>エ　Amazon CloudFront</li>
+</ol>
+<details><summary>答えと解説を見る</summary><div class="ans">
+<p class="ok">正解：ア　Amazon EC2 Auto Scaling</p>
+<p>EC2 Auto Scaling は、CPU使用率などの指標やスケジュールに応じてインスタンスの台数を自動で増減する。CloudFront はコンテンツの配信、Route 53 はDNSで、台数の調整はしない。</p>
+</div></details>
+</section>
+<section class="card" id="q13">
+<div class="qno">第3章　問13</div>
+<p class="qtext">Webアプリで、URLのパス（/images や /api など）によってリクエストを別のサーバー群に振り分けたい。どのロードバランサーが最適？</p>
+<ol class="ch">
+<li>ア　Network Load Balancer</li>
+<li>イ　Gateway Load Balancer</li>
+<li>ウ　Application Load Balancer</li>
+<li>エ　Amazon Route 53</li>
+</ol>
+<details><summary>答えと解説を見る</summary><div class="ans">
+<p class="ok">正解：ウ　Application Load Balancer</p>
+<p>Application Load Balancer（ALB）はHTTP/HTTPSのレイヤー7で動き、パスやホスト名で振り分けられる。Network Load Balancer はTCP/UDPのレイヤー4で動き、HTTPの中身を見た振り分けはしない。</p>
+</div></details>
+</section>
+<section class="card" id="q14">
+<div class="qno">第3章　問14</div>
+<p class="qtext">オンラインゲームのサーバーで、TCP/UDPの通信を非常に低い遅延で大量にさばきたい。固定のIPアドレスも使いたい。どのロードバランサーが最適？</p>
+<ol class="ch">
+<li>ア　Amazon API Gateway</li>
+<li>イ　Application Load Balancer</li>
+<li>ウ　Amazon CloudFront</li>
+<li>エ　Network Load Balancer</li>
+</ol>
+<details><summary>答えと解説を見る</summary><div class="ans">
+<p class="ok">正解：エ　Network Load Balancer</p>
+<p>Network Load Balancer（NLB）はレイヤー4で動き、TCP/UDPを高速・低遅延で処理でき、AZごとに固定IPを持てる。ALB はHTTP/HTTPS向け、API Gateway はAPIの公開・管理のサービス。</p>
+</div></details>
+</section>
+<section class="card" id="q15">
+<div class="qno">第3章　問15</div>
+<p class="qtext">S3に画像がアップロードされたら、サムネイルを自動で作りたい。サーバーの管理はしたくない。どのサービスが最適？</p>
+<ol class="ch">
+<li>ア　Amazon EC2</li>
+<li>イ　Amazon Lightsail</li>
+<li>ウ　AWS Lambda</li>
+<li>エ　Amazon EMR</li>
+</ol>
+<details><summary>答えと解説を見る</summary><div class="ans">
+<p class="ok">正解：ウ　AWS Lambda</p>
+<p>AWS Lambda はS3へのアップロードなどのイベントをきっかけにコードを実行するサーバーレスのサービスで、実行した分だけ課金される。EC2 や Lightsail はサーバーを自分で管理する必要がある。</p>
+</div></details>
+</section>
+<section class="card" id="q16">
+<div class="qno">第3章　問16</div>
+<p class="qtext">1回の処理に数時間かかるバッチ処理を AWS Lambda で動かすのが向かない理由として正しいものはどれ？</p>
+<ol class="ch">
+<li>ア　Lambda はPythonでしか書けないから</li>
+<li>イ　Lambda は1回の実行時間に上限（最大15分）があるから</li>
+<li>ウ　Lambda はVPCの中で動かせないから</li>
+<li>エ　Lambda は使っていない時間も課金されるから</li>
+</ol>
+<details><summary>答えと解説を見る</summary><div class="ans">
+<p class="ok">正解：イ　Lambda は1回の実行時間に上限（最大15分）があるから</p>
+<p>Lambda の1回の実行は最大15分までなので、数時間かかる処理には AWS Batch や ECS などが向く。Lambda は多くの言語に対応し、VPCにも接続でき、実行していない時間は課金されない。</p>
+</div></details>
+</section>
+<section class="card" id="q17">
+<div class="qno">第3章　問17</div>
+<p class="qtext">コンテナを動かしたいが、EC2インスタンスの用意やパッチ適用などのサーバー管理はしたくない。Amazon ECS や Amazon EKS と組み合わせて使うサービスはどれ？</p>
+<ol class="ch">
+<li>ア　Amazon ECR</li>
+<li>イ　AWS Fargate</li>
+<li>ウ　Amazon EC2 Auto Scaling</li>
+<li>エ　AWS Elastic Beanstalk</li>
+</ol>
+<details><summary>答えと解説を見る</summary><div class="ans">
+<p class="ok">正解：イ　AWS Fargate</p>
+<p>AWS Fargate はコンテナ向けのサーバーレスの実行環境で、サーバーを管理せずにコンテナを動かせる。Amazon ECR はコンテナイメージを保存するレジストリで、コンテナを実行する場所ではない。</p>
+</div></details>
+</section>
+<section class="card" id="q18">
+<div class="qno">第3章　問18（2つ選ぶ）</div>
+<p class="qtext">多数のコンテナの起動・停止・配置を管理する（コンテナオーケストレーション）サービスはどれ？2つ選んで。</p>
+<ol class="ch">
+<li>ア　Amazon ECR</li>
+<li>イ　Amazon ECS</li>
+<li>ウ　Amazon EBS</li>
+<li>エ　Amazon EKS</li>
+<li>オ　AWS Glue</li>
+</ol>
+<details><summary>答えと解説を見る</summary><div class="ans">
+<p class="ok">正解：イ　Amazon ECS<br>エ　Amazon EKS</p>
+<p>Amazon ECS はAWS独自の、Amazon EKS はKubernetesの、コンテナオーケストレーションのサービス。すでにKubernetesを使っているならEKSが向く。ECR はコンテナイメージの保存場所で、コンテナの実行は管理しない。</p>
+</div></details>
+</section>
+<section class="card" id="q19">
+<div class="qno">第3章　問19</div>
+<p class="qtext">Dockerのコンテナイメージを安全に保存・管理し、ECSやEKSから取り出して使いたい。どのサービスが最適？</p>
+<ol class="ch">
+<li>ア　Amazon S3 Glacier Deep Archive</li>
+<li>イ　AWS Fargate</li>
+<li>ウ　Amazon EFS</li>
+<li>エ　Amazon ECR</li>
+</ol>
+<details><summary>答えと解説を見る</summary><div class="ans">
+<p class="ok">正解：エ　Amazon ECR</p>
+<p>Amazon ECR（Elastic Container Registry）はコンテナイメージを保存するマネージドのレジストリ。Fargate はコンテナを実行する環境、EFS はファイル共有のストレージで、イメージ管理の機能はない。</p>
+</div></details>
+</section>
+<section class="card" id="q20">
+<div class="qno">第3章　問20</div>
+<p class="qtext">個人事業主が、小さなWebサイトを月額のわかりやすい料金で手軽に立ち上げたい。サーバー・ストレージ・固定IPがセットになったサービスはどれ？</p>
+<ol class="ch">
+<li>ア　Amazon Lightsail</li>
+<li>イ　Amazon EKS</li>
+<li>ウ　AWS Batch</li>
+<li>エ　Amazon EC2 専有ホスト</li>
+</ol>
+<details><summary>答えと解説を見る</summary><div class="ans">
+<p class="ok">正解：ア　Amazon Lightsail</p>
+<p>Amazon Lightsail は仮想サーバー・ストレージ・固定IPなどをまとめた、わかりやすい月額プランで使える簡単なサービス。EKS や専有ホストは、小規模なサイトには大がかりすぎる。</p>
+</div></details>
+</section>
+<div class="pager"><a href="security.html">← セキュリティとコンプライアンス</a><a href="billing.html">請求・料金・サポート →</a></div>
+<div class="cta"><b>続きの920問は、アプリで解けます</b>
+iPhone アプリ「CLF一問一答」は、全1000問・すべて解説つき。間違えた問題をちょうどいい間隔で出し直す復習と、今の実力で合格できるかの予測つき。最初の80問は無料です。
+<br><a class="btn" href="https://apps.apple.com/jp/app/id6824628682">App Store で見る</a></div>
+</main>
+<footer><p>このページは個人が作成した非公式の練習問題で、Amazon Web Services, Inc. およびその関連会社とは関係ありません。問題はすべてオリジナルで、実際の試験問題ではありません。AWS および関連する名称は Amazon.com, Inc. またはその関連会社の商標です。</p><p>最終更新：2026-11-13　<a href="../">練習問題の一覧</a>　<a href="https://shooooogo0520.github.io/shikaku-apps/">サポート・お問い合わせ</a></p></footer>
+</body>
+</html>
