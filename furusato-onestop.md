@@ -78,6 +78,7 @@ iPhone アプリ「ふるさと納税メモ」を作っている個人です。�
 
 - [App Store で見る](https://apps.apple.com/jp/app/id6829091286)
 - [確定申告をすると、ワンストップ特例はどうなる？](https://shooooogo0520.github.io/shikaku-apps/furusato-kakutei)
+- [年末ぎりぎりにふるさと納税をした人が、年明けまでにやること](https://shooooogo0520.github.io/shikaku-apps/furusato-nenmatsu)
 - [サポート](https://shooooogo0520.github.io/shikaku-apps/furusato)
 
 ## ご注意と、確かめる先
