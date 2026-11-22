@@ -77,6 +77,7 @@ description: ふるさと納税のワンストップ特例は、寄付した翌�
 iPhone アプリ「ふるさと納税メモ」を作っている個人です。どのサイトの寄付も1か所に記録して、申請書を出したかをチェックでき、締め切りの前に通知で知らせるアプリです。5件まで無料で、アカウントの登録はいりません。
 
 - [App Store で見る](https://apps.apple.com/jp/app/id6829091286)
+- [確定申告をすると、ワンストップ特例はどうなる？](https://shooooogo0520.github.io/shikaku-apps/furusato-kakutei)
 - [サポート](https://shooooogo0520.github.io/shikaku-apps/furusato)
 
 ## ご注意と、確かめる先
